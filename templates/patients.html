@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Patient List </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.css') }}"> 
+
+</head>
+<body>
+
+    <div>
+
+            <h1> Patient Table with Bootstrap</h1>
+
+            <table class="table table-striped">
+                <tr>  
+                    <th> MRN </th>
+                    <th> First Name </th>
+                    <th> Last Name </th>
+                    <th> DOB </th>
+                    <th> Age </th>
+                    <th> Admit Date</th>
+                    <th> Discharge Date</th>
+                    <th> Insurance</th>
+                </tr>
+                
+                {% for patient in listPatients %}
+                    <tr>
+                        <td> {{ patient.MRN }} </td>
+                        <td> {{ patient.firstName }} </td>
+                        <td> {{ patient.lastName }} </td>
+                        <td> {{ patient.DOB }} </td>
+                        <td> {{ patient.age }} </td>
+                        <td> {{ patient.date_of_admit }} </td>
+                        <td> {{ patient.date_of_discharge }} </td>
+                        <td> {{ patient.insurance_name }} </td>
+
+                    </tr>
+                {% endfor %}
+            </table>
+
+
+
+    </div>
+
+
+</body>
+</html>
