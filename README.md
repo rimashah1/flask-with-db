@@ -4,7 +4,7 @@ This repo is connecting flask to sqlite
 
 Some fake patient data was created. Bootstrap was used for CSS styling
 
-app.py and connectDB.py connect database to flask
+app.py and connectDB.py connect database to flask <br>
 createDB.py creates the data in the database
 
 # Deployed on Azure
